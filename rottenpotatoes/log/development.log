@@ -1369,3 +1369,46 @@ Processing by MoviesController#index as HTML
   [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
   Rendered movies/index.html.haml within layouts/application (2.3ms)
 Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 165.91.12.107 at 2018-10-04 19:13:19 +0000
+
+
+Started GET "/movies" for 165.91.12.107 at 2018-10-04 19:13:19 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (18.6ms)
+Completed 200 OK in 232ms (Views: 195.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.self-2b9b4ceb35a4568bfbe3001eb6cf7d691787c8ec9b2018eecbc3c235cc74b7a4.css?body=1" for 165.91.12.107 at 2018-10-04 19:13:19 +0000
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 165.91.12.107 at 2018-10-04 19:13:19 +0000
+
+
+Started GET "/movies/3" for 165.91.12.107 at 2018-10-04 19:13:33 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/show.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/similar_movies/test" for 165.91.12.107 at 2018-10-04 19:13:36 +0000
+Processing by MoviesController#search as HTML
+  Parameters: {"title"=>"test"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "test"]]
+Redirected to https://60cd6b8b530a420799dc26ce06ca2bf8.vfs.cloud9.us-east-2.amazonaws.com/
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "test"]]
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 165.91.12.107 at 2018-10-04 19:13:36 +0000
+
+
+Started GET "/movies" for 165.91.12.107 at 2018-10-04 19:13:36 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms)
